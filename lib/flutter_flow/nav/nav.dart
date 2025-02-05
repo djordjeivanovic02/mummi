@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+
 import '/index.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
@@ -32,16 +33,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       navigatorKey: appNavigatorKey,
-      errorBuilder: (context, state) => const Onboarding1Widget(),
+      errorBuilder: (context, state) => const ChecklistWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => const Onboarding1Widget(),
+          builder: (context, _) => const ChecklistWidget(),
         ),
         FFRoute(
           name: 'Login',
-          path: '/login',
+          path: '/Login',
           builder: (context, params) => const LoginWidget(),
         ),
         FFRoute(
@@ -60,9 +61,94 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const Onboarding2Widget(),
         ),
         FFRoute(
+          name: 'onboarding4',
+          path: '/onboarding4',
+          builder: (context, params) => const Onboarding4Widget(),
+        ),
+        FFRoute(
           name: 'onboarding3',
           path: '/onboarding3',
           builder: (context, params) => const Onboarding3Widget(),
+        ),
+        FFRoute(
+          name: 'Home',
+          path: '/home',
+          builder: (context, params) => const HomeWidget(),
+        ),
+        FFRoute(
+          name: 'Blog',
+          path: '/blog',
+          builder: (context, params) => const BlogWidget(),
+        ),
+        FFRoute(
+          name: 'BlogItem',
+          path: '/blogItem',
+          builder: (context, params) => const BlogItemWidget(),
+        ),
+        FFRoute(
+          name: 'BlogCategory',
+          path: '/blogCategory',
+          builder: (context, params) => const BlogCategoryWidget(),
+        ),
+        FFRoute(
+          name: 'AddLog1',
+          path: '/addLog1',
+          builder: (context, params) => const AddLog1Widget(),
+        ),
+        FFRoute(
+          name: 'AddLog2',
+          path: '/addLog2',
+          builder: (context, params) => AddLog2Widget(
+            smileImagePath: params.getParam(
+              'smileImagePath',
+              ParamType.String,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'ViewSettings',
+          path: '/viewSettings',
+          builder: (context, params) => const ViewSettingsWidget(),
+        ),
+        FFRoute(
+          name: 'AddLog3',
+          path: '/addLog3',
+          builder: (context, params) => AddLog3Widget(
+            feelingImage: params.getParam(
+              'feelingImage',
+              ParamType.String,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'EditSettings',
+          path: '/editSettings',
+          builder: (context, params) => const EditSettingsWidget(),
+        ),
+        FFRoute(
+          name: 'AddLog4',
+          path: '/addLog4',
+          builder: (context, params) => AddLog4Widget(
+            feelingImage: params.getParam(
+              'feelingImage',
+              ParamType.String,
+            ),
+          ),
+        ),
+        FFRoute(
+          name: 'DailyLogs',
+          path: '/dailyLogs',
+          builder: (context, params) => const DailyLogsWidget(),
+        ),
+        FFRoute(
+          name: 'Checklist',
+          path: '/checklist',
+          builder: (context, params) => const ChecklistWidget(),
+        ),
+        FFRoute(
+          name: 'Tasks',
+          path: '/tasks',
+          builder: (context, params) => const TasksWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

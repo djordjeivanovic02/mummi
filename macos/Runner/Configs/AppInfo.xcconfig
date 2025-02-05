@@ -8,7 +8,7 @@
 PRODUCT_NAME = Mummi
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.mummi
+PRODUCT_BUNDLE_IDENTIFIER = com.djordjeivanovic.mummi
 
 // The copyright displayed in application information
 PRODUCT_COPYRIGHT = Copyright © 2024 Mummi. All rights reserved.

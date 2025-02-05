@@ -1,3 +1,5 @@
+import '/components/input_controls/buttons/primary_button/primary_button_widget.dart';
+import '/components/input_controls/inputs/main_input_field/main_input_field_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'register_widget.dart' show RegisterWidget;
 import 'package:flutter/material.dart';
@@ -5,38 +7,29 @@ import 'package:flutter/material.dart';
 class RegisterModel extends FlutterFlowModel<RegisterWidget> {
   ///  State fields for stateful widgets in this page.
 
-  // State field(s) for SignUpEmail widget.
-  FocusNode? signUpEmailFocusNode;
-  TextEditingController? signUpEmailTextController;
-  String? Function(BuildContext, String?)? signUpEmailTextControllerValidator;
-  // State field(s) for SignUpPassword widget.
-  FocusNode? signUpPasswordFocusNode;
-  TextEditingController? signUpPasswordTextController;
-  late bool signUpPasswordVisibility;
-  String? Function(BuildContext, String?)?
-      signUpPasswordTextControllerValidator;
-  // State field(s) for SignUpRepeatPassword widget.
-  FocusNode? signUpRepeatPasswordFocusNode;
-  TextEditingController? signUpRepeatPasswordTextController;
-  late bool signUpRepeatPasswordVisibility;
-  String? Function(BuildContext, String?)?
-      signUpRepeatPasswordTextControllerValidator;
+  // Model for EmailField.
+  late MainInputFieldModel emailFieldModel;
+  // Model for PasswordField.
+  late MainInputFieldModel passwordFieldModel;
+  // Model for RepeatedPasswordField.
+  late MainInputFieldModel repeatedPasswordFieldModel;
+  // Model for PrimaryButton component.
+  late PrimaryButtonModel primaryButtonModel;
 
   @override
   void initState(BuildContext context) {
-    signUpPasswordVisibility = false;
-    signUpRepeatPasswordVisibility = false;
+    emailFieldModel = createModel(context, () => MainInputFieldModel());
+    passwordFieldModel = createModel(context, () => MainInputFieldModel());
+    repeatedPasswordFieldModel =
+        createModel(context, () => MainInputFieldModel());
+    primaryButtonModel = createModel(context, () => PrimaryButtonModel());
   }
 
   @override
   void dispose() {
-    signUpEmailFocusNode?.dispose();
-    signUpEmailTextController?.dispose();
-
-    signUpPasswordFocusNode?.dispose();
-    signUpPasswordTextController?.dispose();
-
-    signUpRepeatPasswordFocusNode?.dispose();
-    signUpRepeatPasswordTextController?.dispose();
+    emailFieldModel.dispose();
+    passwordFieldModel.dispose();
+    repeatedPasswordFieldModel.dispose();
+    primaryButtonModel.dispose();
   }
 }

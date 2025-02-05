@@ -33,6 +33,14 @@ abstract class FlutterFlowTheme {
   late Color info;
 
   late Color softPink;
+  late Color lightPrimary;
+  late Color peachLight;
+  late Color peachDark;
+  late Color blueLight;
+  late Color blueDark;
+  late Color darkRed;
+  late Color linearPageTransition1;
+  late Color linearPageTransition2;
 
   @Deprecated('Use displaySmallFamily instead')
   String get title1Family => displaySmallFamily;
@@ -108,11 +116,11 @@ class LightModeTheme extends FlutterFlowTheme {
   late Color primary = const Color(0xFFE6287C);
   late Color secondary = const Color(0xFFFF6A73);
   late Color tertiary = const Color(0xFF0299FF);
-  late Color alternate = const Color(0xFFE3E7ED);
+  late Color alternate = const Color(0xFFEEEEEE);
   late Color primaryText = const Color(0xFF2D2929);
   late Color secondaryText = const Color(0xFFB7B0B0);
   late Color primaryBackground = const Color(0xFFFFFFFF);
-  late Color secondaryBackground = const Color(0xFFFFFFFF);
+  late Color secondaryBackground = const Color(0xFFF0F0F0);
   late Color accent1 = const Color(0x4CF83B46);
   late Color accent2 = const Color(0x4CFF6A73);
   late Color accent3 = const Color(0x4D0299FF);
@@ -123,6 +131,14 @@ class LightModeTheme extends FlutterFlowTheme {
   late Color info = const Color(0xFFFFFFFF);
 
   late Color softPink = const Color(0xFFFBDCEA);
+  late Color lightPrimary = const Color(0xFFF671AC);
+  late Color peachLight = const Color(0xFFFFEADD);
+  late Color peachDark = const Color(0xFFF67C30);
+  late Color blueLight = const Color(0xFFDFEDFF);
+  late Color blueDark = const Color(0xFF308AFF);
+  late Color darkRed = const Color(0xFFB30000);
+  late Color linearPageTransition1 = const Color(0xFFF9398E);
+  late Color linearPageTransition2 = const Color(0xFFF671AC);
 }
 
 abstract class Typography {

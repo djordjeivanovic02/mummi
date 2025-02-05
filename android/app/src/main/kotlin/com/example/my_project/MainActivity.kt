@@ -1,4 +1,4 @@
-package com.mycompany.mummi
+package com.djordjeivanovic.mummi
 
 import io.flutter.embedding.android.FlutterActivity
 

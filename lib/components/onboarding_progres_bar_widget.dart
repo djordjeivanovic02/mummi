@@ -1,3 +1,4 @@
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -57,8 +58,8 @@ class _OnboardingProgresBarWidgetState
               lineWidth: 10.0,
               animation: true,
               animateFromLastPercent: true,
-              progressColor: const Color(0xFFF671AC),
-              backgroundColor: const Color(0xFFEEEEEE),
+              progressColor: FlutterFlowTheme.of(context).lightPrimary,
+              backgroundColor: FlutterFlowTheme.of(context).alternate,
             ),
           ),
           Align(
